@@ -1,0 +1,60 @@
+
+
+
+
+[
+      {
+        "id": "1",
+        "title": "Weddings",
+        "thumbnail": "https://i.ibb.co/6DbP579/Weddings-2.jpg",
+        "price": "$1000",
+        "description": "Create memories that last a lifetime with our exquisite wedding planning services. From elegant venues to beautiful decor, we make your dream wedding a reality.",
+        "bg_color": "#FFD700",
+        "text_color": "#000000"
+      },
+      {
+        "id": "2",
+        "title": "Birthday Parties",
+        "thumbnail": "https://i.ibb.co/GQCMWkW/Birthaday-0.jpghttps://i.ibb.co/By2Wjwn/Birthday2.jpg",
+        "price": "$500",
+        "description": "Celebrate another trip around the sun in style. Our birthday party planning services ensure a day filled with joy, fun, and unforgettable moments.",
+        "bg_color": "#FF69B4",
+        "text_color": "#FFFFFF"
+      },
+      {
+        "id": "3",
+        "title": "Anniversaries",
+        "thumbnail": "https://i.ibb.co/w0mNQ88/Anniversaries-1.jpg",
+        "price": "$1500",
+        "description": "Commemorate your love story with a special anniversary celebration. Our services guarantee a romantic and memorable evening for you and your partner.",
+        "bg_color": "#6495ED",
+        "text_color": "#FFFFFF"
+      },
+      {
+        "id": "4",
+        "title": "Engagement Parties",
+        "thumbnail": "https://i.ibb.co/Mgx0Nyn/Engagement.jpg",
+        "price": "$800",
+        "description": "Begin your journey together with a joyous engagement party. We handle all the details, so you can focus on the excitement of saying 'I do.'",
+        "bg_color": "#32CD32",
+        "text_color": "#FFFFFF"
+      },
+      {
+        "id": "5",
+        "title": "Retirement Parties",
+        "thumbnail": "https://i.ibb.co/GCc04LS/Parties.jpg",
+        "price": "$1000",
+        "description": "Celebrate a well-deserved retirement with friends and family. Our retirement party services ensure a memorable and meaningful send-off.",
+        "bg_color": "#FFA500",
+        "text_color": "#000000"
+      },
+      {
+        "id": "6",
+        "title": "Baby Shower",
+        "thumbnail": "https://i.ibb.co/JjhLgtT/Baby-1.jpg",
+        "price": "$400",
+        "description": "Welcome the new bundle of joy with a heartwarming baby shower. We handle everything, so you can focus on the excitement of parenthood.",
+        "bg_color": "#FF1493",
+        "text_color": "#FFFFFF"
+      }
+    ]
