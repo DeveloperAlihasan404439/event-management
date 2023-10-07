@@ -1,60 +1,190 @@
-
-
-
-
 [
+  {
+    "id": "1",
+    "title": "Weddings",
+    "thumbnail": "https://i.ibb.co/sqKGmG1/Weddings-3.jpg",
+    "images": [
+      { "img_list": "https://i.ibb.co/cc5QWQ6/Weddings.jpg" },
+      { "img_list": "https://i.ibb.co/6DbP579/Weddings-2.jpg" },
+      { "img_list": "https://i.ibb.co/BrtftF7/Weddings-4.jpg" },
+      { "img_list": "https://i.ibb.co/sqKGmG1/Weddings-3.jpg" },
       {
-        "id": "1",
-        "title": "Weddings",
-        "thumbnail": "https://i.ibb.co/6DbP579/Weddings-2.jpg",
-        "price": "$1000",
-        "description": "Create memories that last a lifetime with our exquisite wedding planning services. From elegant venues to beautiful decor, we make your dream wedding a reality.",
-        "bg_color": "#FFD700",
-        "text_color": "#000000"
+        "img_list": "https://i.ibb.co/HTQSGPK/matthew-essman-j-Tnip-V64u-Lo-unsplash.jpg"
+      }
+    ],
+    "price": "$1000",
+    "description": "Create memories that last a lifetime with our exquisite wedding planning services. From elegant venues to beautiful decor, we make your dream wedding a reality.",
+    "list": [
+      {
+        "event_name": "John and Mary's Wedding"
       },
       {
-        "id": "2",
-        "title": "Birthday Parties",
-        "thumbnail": "https://i.ibb.co/GQCMWkW/Birthaday-0.jpghttps://i.ibb.co/By2Wjwn/Birthday2.jpg",
-        "price": "$500",
-        "description": "Celebrate another trip around the sun in style. Our birthday party planning services ensure a day filled with joy, fun, and unforgettable moments.",
-        "bg_color": "#FF69B4",
-        "text_color": "#FFFFFF"
+        "event_name": "Sarah and David's Wedding"
       },
       {
-        "id": "3",
-        "title": "Anniversaries",
-        "thumbnail": "https://i.ibb.co/w0mNQ88/Anniversaries-1.jpg",
-        "price": "$1500",
-        "description": "Commemorate your love story with a special anniversary celebration. Our services guarantee a romantic and memorable evening for you and your partner.",
-        "bg_color": "#6495ED",
-        "text_color": "#FFFFFF"
+        "event_name": "Chris and Emily's Wedding"
       },
       {
-        "id": "4",
-        "title": "Engagement Parties",
-        "thumbnail": "https://i.ibb.co/Mgx0Nyn/Engagement.jpg",
-        "price": "$800",
-        "description": "Begin your journey together with a joyous engagement party. We handle all the details, so you can focus on the excitement of saying 'I do.'",
-        "bg_color": "#32CD32",
-        "text_color": "#FFFFFF"
+        "event_name": "Michael and Susan's Wedding"
       },
       {
-        "id": "5",
-        "title": "Retirement Parties",
-        "thumbnail": "https://i.ibb.co/GCc04LS/Parties.jpg",
-        "price": "$1000",
-        "description": "Celebrate a well-deserved retirement with friends and family. Our retirement party services ensure a memorable and meaningful send-off.",
-        "bg_color": "#FFA500",
-        "text_color": "#000000"
-      },
-      {
-        "id": "6",
-        "title": "Baby Shower",
-        "thumbnail": "https://i.ibb.co/JjhLgtT/Baby-1.jpg",
-        "price": "$400",
-        "description": "Welcome the new bundle of joy with a heartwarming baby shower. We handle everything, so you can focus on the excitement of parenthood.",
-        "bg_color": "#FF1493",
-        "text_color": "#FFFFFF"
+        "event_name": "Alex and Jessica's Wedding"
       }
     ]
+  },
+  {
+    "id": "2",
+    "title": "Birthday Parties",
+    "images": [
+      { "img_list": "https://i.ibb.co/qdB0nrW/Birthday.jpg" },
+      { "img_list": "https://i.ibb.co/mrpwPTQ/Birthday-1.png" },
+      { "img_list": "https://i.ibb.co/GQCMWkW/Birthaday-0.jpg" },
+      { "img_list": "https://i.ibb.co/DCyPrK3/Birthday-3.jpg" },
+      { "img_list": "https://i.ibb.co/By2Wjwn/Birthday2.jpg" }
+    ],
+    "thumbnail": "https://i.ibb.co/qdB0nrW/Birthday.jpg",
+    "price": "$500",
+    "description": "Celebrate another trip around the sun in style. Our birthday party planning services ensure a day filled with joy, fun, and unforgettable moments.",
+    "list": [
+      {
+        "event_name": "Alice's 30th Birthday"
+      },
+      {
+        "event_name": "Tom's Surprise Birthday"
+      },
+      {
+        "event_name": "Sophia's Sweet 16"
+      },
+      {
+        "event_name": "Daniel's 40th Birthday"
+      },
+      {
+        "event_name": "Grace's Birthday Bash"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Anniversaries",
+    "images": [
+      { "img_list": "https://i.ibb.co/cc5QWQ6/Weddings.jpg" },
+      { "img_list": "https://i.ibb.co/6DbP579/Weddings-2.jpg" },
+      { "img_list": "https://i.ibb.co/BrtftF7/Weddings-4.jpg" },
+      { "img_list": "https://i.ibb.co/w0mNQ88/Anniversaries-1.jpg" },
+      { "img_list": "https://i.ibb.co/kqtVRyq/Anniversaries-3.jpg" }
+    ],
+    "thumbnail": "https://i.ibb.co/w0mNQ88/Anniversaries-1.jpg",
+    "price": "$1500",
+    "description": "Commemorate your love story with a special anniversary celebration. Our services guarantee a romantic and memorable evening for you and your partner.",
+    "list": [
+      {
+        "event_name": "Jack and Emily's 10th Anniversary"
+      },
+      {
+        "event_name": "Michael and Lisa's 25th Anniversary"
+      },
+      {
+        "event_name": "David and Maria's 50th Anniversary"
+      },
+      {
+        "event_name": "John and Susan's Silver Anniversary"
+      },
+      {
+        "event_name": "Andrew and Linda's 30th Anniversary"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Engagement Parties",
+    "images": [
+      { "img_list": "https://i.ibb.co/cc5QWQ6/Weddings.jpg" },
+      { "img_list": "https://i.ibb.co/6DbP579/Weddings-2.jpg" },
+      { "img_list": "https://i.ibb.co/BrtftF7/Weddings-4.jpg" },
+      { "img_list": "https://i.ibb.co/GCc04LS/Parties.jpg" },
+      { "img_list": "https://i.ibb.co/FYydCZd/Engagement-22.jpg" }
+    ],
+    "thumbnail": "https://i.ibb.co/GCc04LS/Parties.jpg",
+    "price": "$800",
+    "description": "Begin your journey together with a joyous engagement party. We handle all the details, so you can focus on the excitement of saying 'I do.'",
+    "list": [
+      {
+        "event_name": "Ethan and Olivia's Engagement"
+      },
+      {
+        "event_name": "Grace and Daniel's Engagement"
+      },
+      {
+        "event_name": "Sophia and Matthew's Engagement"
+      },
+      {
+        "event_name": "Emma and Liam's Engagement"
+      },
+      {
+        "event_name": "Oliver and Mia's Engagement"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Retirement Parties",
+    "images": [
+      { "img_list": "https://i.ibb.co/cc5QWQ6/Weddings.jpg" },
+      { "img_list": "https://i.ibb.co/6DbP579/Weddings-2.jpg" },
+      { "img_list": "https://i.ibb.co/hVnZg8Q/Engagement-01.jpg" },
+      { "img_list": "https://i.ibb.co/6DbP579/Weddings-2.jpg" },
+      { "img_list": "https://i.ibb.co/BrtftF7/Weddings-4.jpg" }
+    ],
+    "thumbnail": "https://i.ibb.co/Mgx0Nyn/Engagement.jpg",
+    "price": "$1000",
+    "description": "Celebrate a well-deserved retirement with friends and family. Our retirement party services ensure a memorable and meaningful send-off.",
+    "list": [
+      {
+        "event_name": "Susan's Retirement Celebration"
+      },
+      {
+        "event_name": "Robert's Farewell Party"
+      },
+      {
+        "event_name": "Karen's Retirement Bash"
+      },
+      {
+        "event_name": "George's Retirement Send-off"
+      },
+      {
+        "event_name": "James' Retirement Gathering"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Baby Shower",
+    "images": [
+      { "img_list": "https://i.ibb.co/Zf0kF1d/Baby.jpg" },
+      { "img_list": "https://i.ibb.co/JjhLgtT/Baby-1.jpg" },
+      { "img_list": "https://i.ibb.co/9TLhg8f/Baby-2.jpg" },
+      { "img_list": "https://i.ibb.co/j5R7RLD/Baby-4.jpg" },
+      { "img_list": "https://i.ibb.co/xG91JSC/Baby-3.jpg" }
+    ],
+    "thumbnail": "https://i.ibb.co/Zf0kF1d/Baby.jpg",
+    "price": "$400",
+    "description": "Welcome the new bundle of joy with a heartwarming baby shower. We handle everything, so you can focus on the excitement of parenthood.",
+    "list": [
+      {
+        "event_name": "Jennifer's Baby Shower"
+      },
+      {
+        "event_name": "Emily's Baby Shower"
+      },
+      {
+        "event_name": "Sophia's Baby Shower"
+      },
+      {
+        "event_name": "Ella's Baby Shower"
+      },
+      {
+        "event_name": "Liam's Baby Shower"
+      }
+    ]
+  }
+]

@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom"
 import MainLayout from "../MainLayout/MainLayout"
 import Home from "../Home/Home"
+import SocialDetails from "../SocialDetails/SocialDetails"
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -9,7 +10,12 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home/>
-            }
+            },
+            {
+                path: '/details/:id',
+                element: <SocialDetails/>,
+                loader: ()=> fetch('/social.json')
+            },
         ]
     }
 ])
