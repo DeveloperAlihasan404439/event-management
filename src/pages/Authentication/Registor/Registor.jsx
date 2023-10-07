@@ -1,10 +1,10 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../CreateContext/CreateContext";
 
 const Registor = () => {
-  const {name} = useContext(AuthContext)
-  console.log(name);
+  const [errorData, setErrorData] = useState('')
+  const {createUer} = useContext(AuthContext)
   const hendelRegistor = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -12,16 +12,26 @@ const Registor = () => {
     const photo = e.target.photo.value;
     const password = e.target.password.value;
     const confirm = e.target.confirm.value;
-    if (password.length < 6) {
-      return console.log("Password must be 6 characters long");
+    setErrorData('')
+    /* if (password.length < 6) {
+      return setErrorData("Password must be 6 characters long");
     }
     if (!/[A-Z]/.test(password)) {
-      return console.log("Password must be one uppercase");
+      return setErrorData("Password must be one uppercase");
     }
     if (!/[@#$%^&+=!]/.test(password)) {
-      return console.log("Password must be special symbol");
-    }
-    console.log(name, email, password, photo, confirm);
+      return setErrorData("Password must be special symbol");
+    } */
+    createUer(email, password)
+    .then((result) => {
+      // Signed up 
+      const user = result.user;
+      console.log(user);
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      setErrorData(errorMessage);
+    });
   };
   return (
     <div className="w-11/12 mx-auto pt-20 pb-10">
@@ -69,8 +79,7 @@ const Registor = () => {
               // required
             />
           </div>
-          <div className="flex gap-4">
-            <div className="form-control w-[50%]">
+            <div className="form-control">
               <label className="label">
                 <span className="label-text text-2xl text-orange-500">
                   Password
@@ -84,27 +93,16 @@ const Registor = () => {
                 // required
               />
             </div>
-            <div className="form-control w-[50%]">
-              <label className="label">
-                <span className="label-text text-2xl text-orange-500">
-                  Confirm Password
-                </span>
-              </label>
-              <input
-                type="password"
-                placeholder="password"
-                name="confirm"
-                className="input input-bordered text-white bg-[#2b2e3328] border-2 w-full"
-                // required
-              />
-            </div>
-          </div>
+          {
+            errorData? <p className="text-xl text-red-600
+            ">{errorData}</p>:''
+          }
           <input
             type="submit"
             className="w-full py-2 text-xl mt-7 text-black bg-gradient-to-r from-orange-500 to-orange-300 rounded-lg"
             value="Registor"
           />
-          <p className="text-xl text-white pt-5">Already have an account <Link className="text-orange-500 hover:underline"> Please Login</Link></p>
+          <p className="text-xl text-white pt-5">Already have an account <Link to="/login" className="text-orange-500 hover:underline"> Please Login</Link></p>
         </form>
       </div>
     </div>
