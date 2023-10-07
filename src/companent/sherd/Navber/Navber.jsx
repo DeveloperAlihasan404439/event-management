@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { GrClose } from "react-icons/gr";
+import { AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 const Navber = () => {
   const [open, setOpen] = useState(true);
@@ -31,7 +31,7 @@ const Navber = () => {
                     className="drawer-content text-xl"
                   >
                     <label htmlFor="my-drawer-4">
-                      {open ? <GiHamburgerMenu className="text-white"/> : <GrClose className="text-white"/>}
+                      {open ? <GiHamburgerMenu className="text-white text-2xl"/> : <AiOutlineClose className="text-white text-2xl"/>}
                     </label>
                   </div>
                   <div className="drawer-side mt-16">
@@ -40,7 +40,7 @@ const Navber = () => {
                       aria-label="close sidebar"
                       className="drawer-overlay"
                     ></label>
-                    <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content ">
+                    <ul className="menu p-4 w-[80%] min-h-full bg-base-200 text-base-content ">
                       {/* Sidebar content here */}
                       {nav}
                     </ul>

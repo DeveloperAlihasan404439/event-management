@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FaCheck } from "react-icons/fa6";
 
@@ -15,8 +15,8 @@ const SocialDetails = () => {
   const { thumbnail, title, description, price, list, images } = detail;
   console.log(list);
   return (
-    <div className="pt-20 pb-10 text-white flex gap-5 items-center w-11/12 mx-auto h-[100vh]">
-      <div className="md:w-[60%]">
+    <div className="pt-20 pb-10 text-white lg:flex gap-5 items-center w-11/12 mx-auto lg:h-[100vh]">
+      <div className="w-full lg:w-[60%]">
         <img src={listImages?listImages:thumbnail} alt="" className="w-[100%] rounded-2xl" />
         <div className="flex  gap-3 items-center justify-center py-3 my-2 bg-[#05070e91]">
           {images?.map((image, i) => (
@@ -26,7 +26,7 @@ const SocialDetails = () => {
           ))}
         </div>
       </div>
-      <div className="md:w-[40%]">
+      <div className="w-full lg:w-[40%]">
         <h1 className="text-2xl md:text-3xl font-medium text-white pb-3">
           Tatel : {title}
         </h1>
@@ -44,9 +44,11 @@ const SocialDetails = () => {
             </div>
           ))}
         </div>
+        <Link to='/'>
         <button className="w-full py-2 bg-gradient-to-r from-orange-500 to-orange-300 rounded-lg text-xl font-medium shadow-lg">
           Go To Home Pages
         </button>
+        </Link>
       </div>
     </div>
   );

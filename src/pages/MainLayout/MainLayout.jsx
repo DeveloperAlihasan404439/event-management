@@ -4,7 +4,7 @@ import Navber from "../../companent/sherd/Navber/Navber";
 
 const MainLayout = () => {
     return (
-        <div className="bg-[#0E1528]">
+        <div className="bg-[#0E1528] w-full">
             <Navber/>
             <Outlet/>
         </div>
