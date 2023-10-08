@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import "./styles.css";
+import "./OurTimes.css";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -38,7 +38,7 @@ const OurTimes = () => {
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
           onAutoplayTimeLeft={onAutoplayTimeLeft}
-          className="mySwiper z-20 h-40"
+          className="mySwiper z-20 h-40 rounded-[20px]"
         >
           {user?.map((times) => (
             <SwiperSlide key={times.id} className="relative">

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AuthContext } from "../../CreateContext/CreateContext";
+import Swal from "sweetalert2";
 
 const Registor = () => {
   const [errorData, setErrorData] = useState('')
@@ -23,10 +24,15 @@ const Registor = () => {
     }
     createUer(email, password)
     .then((result) => {
-      // Signed up 
-      const user = result.user;
-      console.log(user);
-      setErrorData('success registor')
+      Swal.fire(
+        'Login Your Google',
+        'Success the registor in user',
+        'success'
+      )
+      if(result){
+        return <Navigate to='/'/>
+
+      }
     })
     .catch((error) => {
       const errorMessage = error.message;

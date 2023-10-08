@@ -3,27 +3,28 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../pages/CreateContext/CreateContext";
+import {
+  Menu,
+  MenuButton,
+  MenuDivider,
+  MenuItem,
+  MenuList,
+} from "@chakra-ui/react";
 const Navber = () => {
   const [open, setOpen] = useState(true);
   const { logOurUser, user } = useContext(AuthContext);
+  console.log(user);
   const nav = (
     <>
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/about">About</NavLink>
-      {user ? (
-        <>
-          <NavLink onClick={logOurUser}>Log Out</NavLink>
-        </>
-      ) : (
-        <>
-          <NavLink to="/registor">Registor</NavLink>
-          <NavLink to="/login">Login</NavLink>
-        </>
-      )}
+      <NavLink> About</NavLink>
+      {
+        user?<NavLink to="/services">Services</NavLink>:''
+      }
     </>
   );
   return (
-    <div className="fixed z-20 w-[100%] bg-[#1e1919a8] border-b-2 border-[#1721319f]">
+    <div className="fixed z-30 w-[100%] bg-[#1e1919a8] border-b-2 border-[#1721319f]">
       <div className="w-11/12 mx-auto ">
         <div className="navbar gap-4">
           <div className="flex justify-between w-full">
@@ -52,21 +53,41 @@ const Navber = () => {
                     aria-label="close sidebar"
                     className="drawer-overlay"
                   ></label>
-                  <ul className="menu p-4 w-[80%] min-h-full bg-base-200 text-base-content ">
-                    {/* Sidebar content here */}
+                  <ul className="menu p-4 w-[80%] min-h-full bg-base-200 text-base-content text-xl">
                     {nav}
+                    <h1 className="border-2 border-b w-full border-orange-500"></h1>
+                    {
+                    user?
+                    <>
+                    <img
+                      
+                      src={user.photoURL}
+                      alt=""
+                      className="w-[40px] rounded-[50%] text-white"
+                    />
+                    <h1>{user.displayName}</h1>
+                    <h1>{user.email}</h1>
+                    <hr />
+                    <NavLink onClick={logOurUser}>Log Out</NavLink>
+                    
+                    </>
+                  :<>
+                    <NavLink to="/registor">Registor</NavLink>
+                    <NavLink to="/login">Login</NavLink>
+                  </>
+                  }
                   </ul>
                 </div>
               </div>
             </div>
-            <div className="hidden lg:block">
-              <div className="flex gap-3 items-center">
+            <div className="">
+              <div className="flex gap-3 items-center lg:flex-row-reverse">
+                <h1 className="text-3xl font-mono text-white">Fieta</h1>
                 <img
                   src="https://i.ibb.co/2hJ4c8X/Feista-removebg-preview.png"
                   alt=""
                   className="w-[50px] rounded-lg"
                 />
-                <h1 className="text-3xl font-mono text-white">Fieta</h1>
               </div>
             </div>
           </div>
@@ -75,17 +96,71 @@ const Navber = () => {
               {nav}
             </ul>
           </div>
-          <div className="lg:w-full flex justify-end">
-            {
-              user?<div className="flex gap-4 items-center">
-                <div className="text-right">
-                <h1 className="text-white">{user?.displayName}</h1>
-                <h1 className="text-white">{user?.email}</h1>
+          <div className="hidden lg:w-full lg:block ">
+            <div className ="flex justify-end">
+
+            <Menu>
+              <MenuButton colorScheme="pink">
+                <div className="border-2 p-1 rounded-[50%] border-orange-500">
+                  {
+                    user?
+                    <img
+                      
+                      src={user.photoURL}
+                      alt=""
+                      className="w-[40px] rounded-[50%] text-white"
+                    />
+                    :<img
+                      src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg"
+                      alt=""
+                      className="w-[40px] rounded-[50%] text-white"
+                    />
+                  }
                 </div>
-                <img src={user?.photoURL} alt="" className="w-[50px] rounded-[50%]"/>
+              </MenuButton>
+              <MenuList>
+                <div className={`bg-white  ${user?'w-full':'w-[150px]'} p-4 text-xl rounded-lg`}>
+
+                    
+                  {
+                    user?
+                    <>
+                    <MenuItem>{user.displayName}</MenuItem>
+                    <MenuItem>{user.email}</MenuItem>
+                    <MenuDivider />
+                  <MenuItem>
+                    <NavLink onClick={logOurUser}>Log Out</NavLink>
+                  </MenuItem>
+                    
+                    </>
+                  :<>
+                  <MenuItem>
+                    <NavLink to="/registor">Registor</NavLink>
+                  </MenuItem>
+                  <MenuItem>
+                    <NavLink to="/login">Login</NavLink>
+                  </MenuItem>
+                  </>
+                  }
+                </div>
+              </MenuList>
+            </Menu>
+            </div>
+            {/* {user ? (
+              <div onClick={()=>setUsers(!users)} className="flex gap-4 items-center">
+                <img
+                  src={user?.photoURL}
+                  alt=""
+                  className="w-[50px] rounded-[50%]"
+                />
               </div>
-              :<img src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" alt="" className="w-[50px] rounded-[50%] text-white"/>
-            }
+            ) : (
+              <img onClick={()=>setUsers(!users)}
+                src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg"
+                alt=""
+                className="w-[50px] rounded-[50%] text-white"
+              />
+            )} */}
           </div>
         </div>
       </div>

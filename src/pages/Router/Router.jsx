@@ -6,6 +6,7 @@ import Registor from "../Authentication/Registor/Registor"
 import Login from "../Authentication/Login/Login"
 import PriveatRoute from "../PriveatRoute/PriveatRoute"
 import Error from "../Error/Error"
+import ServicesSocail from "../ServicesSocail/ServicesSocail"
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
                 path: '/details/:id',
                 loader: ()=> fetch('/social.json'),
                 element: <PriveatRoute><SocialDetails/></PriveatRoute>
+            },
+            {
+                path: '/services',
+                element: <PriveatRoute><ServicesSocail/></PriveatRoute>
             },
             {
                 path: '/registor',

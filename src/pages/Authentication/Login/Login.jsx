@@ -3,6 +3,7 @@ import { BsGoogle, BsGithub } from "react-icons/bs";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../CreateContext/CreateContext";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
+import Swal from "sweetalert2";
 const Login = () => {
   const [errorid, setErrorid] = useState(null);
   const { loginUser, googleUser, githubUser } = useContext(AuthContext);
@@ -18,7 +19,11 @@ const Login = () => {
     loginUser(email, password)
       .then(() => {
         navigate(location?.state ? location.state.from.pathname : "/");
-        setErrorid("success login");
+        Swal.fire(
+          'Login User',
+          'Success the login user',
+          'success'
+        )
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -29,7 +34,11 @@ const Login = () => {
     googleUser(googleProvider)
       .then(() => {
         navigate(location?.state ? location.state.from.pathname : "/");
-        setErrorid("success login");
+        Swal.fire(
+          'Login Your Google',
+          'Success has login am google',
+          'success'
+        )
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -40,7 +49,11 @@ const Login = () => {
     githubUser(githubProvider)
       .then(() => {
         navigate(location?.state ? location.state.from.pathname : "/");
-        setErrorid("success login");
+        Swal.fire(
+          'Login Your Google',
+          'Success has login am github',
+          'success'
+        )
       })
       .catch((error) => {
         const errorMessage = error.message;

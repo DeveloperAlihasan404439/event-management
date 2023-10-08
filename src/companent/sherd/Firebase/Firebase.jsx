@@ -5,15 +5,16 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 // Your web app's Firebase configuration
+// console.log(import.meta.env.);
 const firebaseConfig = {
-    apiKey: "AIzaSyDwakove-JZf69s8R4O4VQOhLdYHmCr7bs",
-    authDomain: "social-projact.firebaseapp.com",
-    projectId: "social-projact",
-    storageBucket: "social-projact.appspot.com",
-    messagingSenderId: "528170744036",
-    appId: "1:528170744036:web:c0d886fcae72fe248954f1"
+    apiKey:import.meta.env.VITE_API_KEY,
+    authDomain:import.meta.env.VITE_AUT_HDOMAIN,
+    projectId:import.meta.env.VITE_PRO_JECTID,
+    storageBucket:import.meta.env.VITE_STO_RAGEBUCKET,
+    messagingSenderId: import.meta.env.VITE_MES_SAGINGSENDERID,
+    appId:import.meta.env.VITE_APP_ID,
   };
-
+console.log(firebaseConfig);
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app)

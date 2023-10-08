@@ -1,6 +1,7 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FaCheck } from "react-icons/fa6";
+import { setLocalStorage } from "../utilites/LocalStorage";
 
 const SocialDetails = () => {
   const [detail, setDetail] = useState({});
@@ -11,9 +12,11 @@ const SocialDetails = () => {
     const details = socail?.find((socail) => socail.id === id);
     setDetail(details);
   }, [id]);
-  // console.log(detail);
   const { thumbnail, title, description, price, list, images } = detail;
-  console.log(list);
+  // local storages added the services 
+  const hendelLocalStorage = id =>{
+    setLocalStorage(id)
+  }
   return (
     <div className="pt-20 pb-10 text-white lg:flex gap-5 items-center w-11/12 mx-auto lg:h-[100vh]">
       <div className="w-full lg:w-[60%]">
@@ -44,11 +47,16 @@ const SocialDetails = () => {
             </div>
           ))}
         </div>
-        <Link to='/'>
-        <button className="w-full py-2 bg-gradient-to-r from-orange-500 to-orange-300 rounded-lg text-xl font-medium shadow-lg">
+        <div className="md:flex gap-4">
+        <button onClick={()=>hendelLocalStorage(detail.id)} className="w-full text-black py-2 bg-gradient-to-l from-orange-500 to-orange-300 rounded-lg text-xl font-medium shadow-lg">
+          Add The Services
+        </button>
+        <Link to='/' className="w-full text-center text-black py-2 bg-gradient-to-r from-orange-500 to-orange-300 rounded-lg text-xl font-medium shadow-lg">
+        <button className=" ">
           Go To Home Pages
         </button>
         </Link>
+        </div>
       </div>
     </div>
   );
