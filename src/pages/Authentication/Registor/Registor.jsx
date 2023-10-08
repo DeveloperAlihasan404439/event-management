@@ -1,11 +1,16 @@
 import { useContext, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link,  useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../CreateContext/CreateContext";
 import Swal from "sweetalert2";
+import { getAuth, updateProfile } from "firebase/auth";
 
 const Registor = () => {
   const [errorData, setErrorData] = useState('')
   const {createUer} = useContext(AuthContext)
+  const location = useLocation();
+  console.log(location);
+  const navigate = useNavigate();
+  const auth = getAuth()
   const hendelRegistor = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -23,16 +28,21 @@ const Registor = () => {
       return setErrorData("Password must be special symbol");
     }
     createUer(email, password)
-    .then((result) => {
+    .then(() => {
+      
       Swal.fire(
         'Login Your Google',
         'Success the registor in user',
         'success'
       )
-      if(result){
-        return <Navigate to='/'/>
-
-      }
+      updateProfile(auth.currentUser, {
+        displayName: name, photoURL: photo
+      }).then(() => {
+      }).catch((error) => {
+        const errorMessage = error.message;
+        setErrorData(errorMessage);
+      });
+      return navigate(location?.state ? location.state.from.pathname : "/login");
     })
     .catch((error) => {
       const errorMessage = error.message;

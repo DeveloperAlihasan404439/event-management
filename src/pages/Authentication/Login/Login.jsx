@@ -2,7 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BsGoogle, BsGithub } from "react-icons/bs";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../CreateContext/CreateContext";
-import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, } from "firebase/auth";
 import Swal from "sweetalert2";
 const Login = () => {
   const [errorid, setErrorid] = useState(null);
@@ -10,25 +10,50 @@ const Login = () => {
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
   const location = useLocation();
-  console.log();
+  console.log(location);
   const navigate = useNavigate();
   const hendelLogin = (e) => {
+    setErrorid('')
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     loginUser(email, password)
       .then(() => {
-        navigate(location?.state ? location.state.from.pathname : "/");
         Swal.fire(
           'Login User',
           'Success the login user',
           'success'
-        )
+          )
+         return navigate(location?.state ? location.state.from.pathname : "/");
       })
-      .catch((error) => {
+      .catch ((error)=>{
+        const errorCode = error.code;
+        if(errorCode === "auth/invalid-email"){
+          return setErrorid("Invalid email address. Please check the email format.");
+        }
+        else if(errorCode === "auth/wrong-password"){
+          return setErrorid("Incorrect password. Please check your password.");
+        }
+        else{
+          setErrorid("An error occurred. Please try again later.");
+        }
+      })
+      e.target.reset();
+      /* .catch((error) => {
+        const errorCode = error.code;
+        console.log(error);
         const errorMessage = error.message;
-        setErrorid(errorMessage);
-      });
+        if (errorCode === 'auth/invalid-email') {
+          setErrorid('Invalid email address. Please check the email format.');
+        } else if (errorCode === 'auth/user-not-found') {
+          setErrorid('User not found. Please check your email.');
+        } else if (errorCode === 'auth/wrong-password') {
+          setErrorid('Incorrect password. Please check your password.');
+        } else {
+          // Handle other authentication errors
+          setErrorid(errorMessage);
+        }
+      }); */
   };
   const hendelGoogleLogin = () => {
     googleUser(googleProvider)
@@ -56,6 +81,7 @@ const Login = () => {
         )
       })
       .catch((error) => {
+        console.log(error);
         const errorMessage = error.message;
         setErrorid(errorMessage);
       });

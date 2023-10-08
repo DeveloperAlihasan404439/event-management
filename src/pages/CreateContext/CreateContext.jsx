@@ -1,17 +1,16 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../../companent/sherd/Firebase/Firebase";
-
 export const AuthContext = createContext(null)
 const CreateContext = ({children}) => {
     const [user, setUser] = useState(null)
-    const [loding, setLoding] = useState(true)
+    const [loading, setLoading] = useState(true)
     const createUer = (email, password)=>{
-        setLoding(true)
+        setLoading(true)
        return createUserWithEmailAndPassword(auth,email,password)
     }
     const loginUser = (email, password)=>{
-        setLoding(true)
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
     const googleUser = googleProvider=>{
@@ -20,13 +19,13 @@ const CreateContext = ({children}) => {
     const githubUser = githubProvider=>{
         return signInWithPopup(auth, githubProvider)
     }
-    const logOurUser = ()=>{
-        setLoding(true)
-        return signOut(auth)
-    }
+    const logOutUser =  () => {
+          setLoading(true);
+          return signOut(auth);
+      };
     useEffect(()=>{
        const unsubcrides =  onAuthStateChanged(auth, curret=>{
-            setLoding(false)
+            setLoading(false)
             setUser(curret)
         })
         return ()=>{
@@ -39,8 +38,8 @@ const CreateContext = ({children}) => {
         loginUser,
         googleUser,
         githubUser,
-        loding,
-        logOurUser
+        loding: loading,
+        logOutUser
     }
     return (
         <AuthContext.Provider value={authInfo}>

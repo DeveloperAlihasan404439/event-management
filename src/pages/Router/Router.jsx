@@ -7,6 +7,7 @@ import Login from "../Authentication/Login/Login"
 import PriveatRoute from "../PriveatRoute/PriveatRoute"
 import Error from "../Error/Error"
 import ServicesSocail from "../ServicesSocail/ServicesSocail"
+import ContactUs from "../../companent/ContactUs/ContactUs"
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
             {
                 path: '/services',
                 element: <PriveatRoute><ServicesSocail/></PriveatRoute>
+            },
+            {
+                path: '/contact',
+                element: <ContactUs/>,
             },
             {
                 path: '/registor',

@@ -9,7 +9,16 @@ import {
 const SocailInfo = () => {
   return (
     <div className="w-11/12 mx-auto py-8">
-        <h1 className="text-xl md:text-2xl lg:text-4xl font-medium text-center pb-5 text-orange-500">Socail Events Information</h1>
+      <h1 className="text-xl md:text-2xl lg:text-4xl font-medium text-center pb-5 text-orange-500">
+        Socail Events Information
+      </h1>
+      <h1 className="text-lg md:text-xl font-medium text-center pb-5 text-white w-[50%] mx-auto">
+        Social events are gatherings that bring people together for various
+        purposes, fostering social interaction, and creating memorable
+        experiences. These events play a vital role in building connections,
+        strengthening relationships, and celebrating important moments in our
+        lives.
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div>
           <Accordion defaultIndex={[0]} allowToggle>
@@ -22,7 +31,7 @@ const SocailInfo = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <p className="bg-base-200 text-black rounded-lg text-lg text-justify">
+              <div className="bg-base-200 text-black rounded-lg text-lg text-justify">
                 <AccordionPanel pb={4} className=" p-4">
                   A wedding is a once-in-a-lifetime event where two souls come
                   together in love and commitment. Join us in celebrating the
@@ -33,7 +42,7 @@ const SocailInfo = () => {
                   reception, this day promises to be a magical experience for
                   all. Come and share in our happiness on [Date] at [Venue].
                 </AccordionPanel>
-              </p>
+              </div>
             </AccordionItem>
 
             <AccordionItem>
@@ -45,7 +54,7 @@ const SocailInfo = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <p className="bg-base-200 text-black rounded-lg text-lg text-justify">
+              <div className="bg-base-200 text-black rounded-lg text-lg text-justify">
                 <AccordionPanel pb={4} className=" p-4">
                   Birthdays are all about celebrating life and making memories.
                   Get ready to put on your party hat and join us for a fantastic
@@ -55,7 +64,7 @@ const SocailInfo = () => {
                   filled with joy and success. Join us on [Date] at [Venue] and
                   lets make this birthday unforgettable!
                 </AccordionPanel>
-              </p>
+              </div>
             </AccordionItem>
             <AccordionItem>
               <h2 className="text-black text-xl font-medium bg-white p-3 rounded-lg shadow-xl mt-4">
@@ -66,7 +75,7 @@ const SocailInfo = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <p className="bg-base-200 text-black rounded-lg text-lg text-justify">
+              <div className="bg-base-200 text-black rounded-lg text-lg text-justify">
                 <AccordionPanel pb={4} className=" p-4">
                   Fifty years of love, laughter, and togetherness deserve a
                   grand celebration. Join us in commemorating the golden
@@ -77,7 +86,7 @@ const SocailInfo = () => {
                   as we come together to celebrate 50 years of a love that has
                   stood the test of time.
                 </AccordionPanel>
-              </p>
+              </div>
             </AccordionItem>
           </Accordion>
         </div>
@@ -99,7 +108,7 @@ const SocailInfo = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <p className="bg-base-200 text-black rounded-lg text-lg text-justify">
+              <div className="bg-base-200 text-black rounded-lg text-lg text-justify">
                 <AccordionPanel pb={4} className=" p-4">
                   Love is in the air as we gather to celebrate the engagement of
                   [Couples Names]. Theyve taken the exciting step of committing
@@ -109,7 +118,7 @@ const SocailInfo = () => {
                   [Date] at [Venue], and we look forward to sharing in the
                   happiness of this special moment.
                 </AccordionPanel>
-              </p>
+              </div>
             </AccordionItem>
 
             <AccordionItem>
@@ -121,7 +130,7 @@ const SocailInfo = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <p className="bg-base-200 text-black rounded-lg text-lg text-justify">
+              <div className="bg-base-200 text-black rounded-lg text-lg text-justify">
                 <AccordionPanel pb={4} className=" p-4">
                   After years of hard work and dedication, its time to bid
                   farewell to [Retirees Name]. Join us in celebrating their
@@ -131,7 +140,7 @@ const SocailInfo = () => {
                   relaxing and adventurous retirement. Lets raise a toast to
                   [Retirees Name] on [Date] at [Venue].
                 </AccordionPanel>
-              </p>
+              </div>
             </AccordionItem>
             <AccordionItem>
               <h2 className="text-black text-xl font-medium bg-white p-3 rounded-lg shadow-xl mt-4">
@@ -142,7 +151,7 @@ const SocailInfo = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <p className="bg-base-200 text-black rounded-lg text-lg text-justify">
+              <div className="bg-base-200 text-black rounded-lg text-lg text-justify">
                 <AccordionPanel pb={4} className=" p-4">
                   A little one is on the way, and we cant wait to celebrate!
                   Join us for a baby shower in honor of Parents Names as they
@@ -152,7 +161,7 @@ const SocailInfo = () => {
                   date for [Date] at [Venue] and get ready for an adorable and
                   heartwarming event.
                 </AccordionPanel>
-              </p>
+              </div>
             </AccordionItem>
           </Accordion>
         </div>

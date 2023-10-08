@@ -1,4 +1,5 @@
 // import Galarey from "../../companent/Galarey/Galarey";
+import ContactUs from "../../companent/ContactUs/ContactUs";
 import OurTimes from "../../companent/OurTimes/OurTimes";
 import SocailInfo from "../../companent/SocailInfo/SocailInfo";
 import SocialCart from "../../companent/SocialCarts/SocialCarts";
@@ -12,6 +13,8 @@ const Home = () => {
             <SocialCart/>
             <SocailInfo/>
             <OurTimes/>
+            <ContactUs/>
+
         </div>
     );
 };

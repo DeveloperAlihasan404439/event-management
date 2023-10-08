@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState,useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
@@ -12,12 +12,11 @@ import {
 } from "@chakra-ui/react";
 const Navber = () => {
   const [open, setOpen] = useState(true);
-  const { logOurUser, user } = useContext(AuthContext);
-  console.log(user);
+  const { logOutUser, user } = useContext(AuthContext);
   const nav = (
     <>
       <NavLink to="/">Home</NavLink>
-      <NavLink> About</NavLink>
+      <NavLink to="/contact"> Contact Us</NavLink>
       {
         user?<NavLink to="/services">Services</NavLink>:''
       }
@@ -68,7 +67,7 @@ const Navber = () => {
                     <h1>{user.displayName}</h1>
                     <h1>{user.email}</h1>
                     <hr />
-                    <NavLink onClick={logOurUser}>Log Out</NavLink>
+                    <NavLink onClick={logOutUser}>Log Out</NavLink>
                     
                     </>
                   :<>
@@ -100,7 +99,7 @@ const Navber = () => {
             <div className ="flex justify-end">
 
             <Menu>
-              <MenuButton colorScheme="pink">
+              <MenuButton colorscheme="pink">
                 <div className="border-2 p-1 rounded-[50%] border-orange-500">
                   {
                     user?
@@ -129,7 +128,7 @@ const Navber = () => {
                     <MenuItem>{user.email}</MenuItem>
                     <MenuDivider />
                   <MenuItem>
-                    <NavLink onClick={logOurUser}>Log Out</NavLink>
+                    <NavLink onClick={logOutUser}>Log Out</NavLink>
                   </MenuItem>
                     
                     </>
