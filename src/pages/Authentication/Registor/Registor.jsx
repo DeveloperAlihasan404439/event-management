@@ -11,7 +11,6 @@ const Registor = () => {
     const email = e.target.email.value;
     const photo = e.target.photo.value;
     const password = e.target.password.value;
-    const confirm = e.target.confirm.value;
     setErrorData('')
     /* if (password.length < 6) {
       return setErrorData("Password must be 6 characters long");
@@ -27,6 +26,7 @@ const Registor = () => {
       // Signed up 
       const user = result.user;
       console.log(user);
+      setErrorData('success registor')
     })
     .catch((error) => {
       const errorMessage = error.message;

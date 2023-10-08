@@ -77,7 +77,13 @@ const Navber = () => {
           </div>
           <div className="lg:w-full flex justify-end">
             {
-              user?<img src={user?.photoURL} alt="" className="w-[50px] rounded-[50%]"/>
+              user?<div className="flex gap-4 items-center">
+                <div className="text-right">
+                <h1 className="text-white">{user?.displayName}</h1>
+                <h1 className="text-white">{user?.email}</h1>
+                </div>
+                <img src={user?.photoURL} alt="" className="w-[50px] rounded-[50%]"/>
+              </div>
               :<img src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg" alt="" className="w-[50px] rounded-[50%] text-white"/>
             }
           </div>

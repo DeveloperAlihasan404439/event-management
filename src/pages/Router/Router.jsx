@@ -4,10 +4,13 @@ import Home from "../Home/Home"
 import SocialDetails from "../SocialDetails/SocialDetails"
 import Registor from "../Authentication/Registor/Registor"
 import Login from "../Authentication/Login/Login"
+import PriveatRoute from "../PriveatRoute/PriveatRoute"
+import Error from "../Error/Error"
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout/>,
+        errorElement: <Error/>,
         children: [
             {
                 path: '/',
@@ -15,8 +18,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/details/:id',
-                element: <SocialDetails/>,
-                loader: ()=> fetch('/social.json')
+                loader: ()=> fetch('/social.json'),
+                element: <PriveatRoute><SocialDetails/></PriveatRoute>
             },
             {
                 path: '/registor',

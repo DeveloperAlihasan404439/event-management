@@ -1,41 +1,46 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { BsGoogle,BsGithub } from 'react-icons/bs';
 import { useContext, useState } from "react";
 import { AuthContext } from "../../CreateContext/CreateContext";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 const Login = () => {
-    const [errorDatas, setErrorDatas] = useState('')
-    const {loginUser,googleUser,githubUser} = useContext(AuthContext)
+    const [errorid, setErrorid] = useState(null)
+    const {loginUser,googleUser,githubUser,} = useContext(AuthContext)
     const googleProvider = new GoogleAuthProvider()
     const githubProvider = new GithubAuthProvider()
+    const location = useLocation()
+    const navigate = useNavigate()
   const hendelLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     loginUser(email, password)
-    .then(result => {
-        const userInfo = result.user
-        console.log(userInfo);
-    })
-    .cetch(error =>{
+    .then((userCredential) => {
+        navigate(location?.state? location.state: '/')
+        const user = userCredential.user;
+        console.log(user);
+      })
+      .catch((error) => {
         const errorMessage = error.message;
-      setErrorDatas(errorMessage);
-    })
+        setErrorid(errorMessage)
+      });
   };
   const hendelGoogleLogin = ()=>{
     googleUser(googleProvider)
     .then(resutl => {
+        navigate(location?.state? location.state: '/')
         const userInfo = resutl.user;
         console.log(userInfo);
     })
     .catch((error) => {
         const errorMessage = error.message;
-        console.log(errorMessage);
+        setErrorid(errorMessage);
       });
   }
   const hendelGithubLogin = ()=>{
     githubUser(githubProvider)
     .then(resutl => {
+        navigate(location?.state? location.state: '/')
         const userInfo = resutl.user;
         console.log(userInfo);
     })
@@ -64,7 +69,7 @@ const Login = () => {
               name="email"
               placeholder="email"
               className="input input-bordered text-white bg-[#2b2e3328] border-2"
-              // required
+              required
             />
           </div>
           <div className="form-control">
@@ -78,7 +83,7 @@ const Login = () => {
               placeholder="password"
               name="password"
               className="input input-bordered text-white bg-[#2b2e3328] border-2 w-full"
-              // required
+              required
             />
             <label className="label">
               <a href="#" className="label-text-alt link link-hover text-white">
@@ -87,8 +92,8 @@ const Login = () => {
             </label>
           </div>
           {
-            errorDatas?<p className="text-xl text-red-500 pt-4">{errorDatas}</p>
-            :<p className="text-xl text-red-500 pt-4">Success login </p>
+            errorid?<p className="text-xl text-red-500 pt-4">{errorid}</p>
+            :''
           }
           <input
             type="submit"
@@ -96,22 +101,22 @@ const Login = () => {
             value="Login"
           />
           <div className="flex w-full pt-4 text-white">
-            <div className="grid flex-grow card bg-base-300 rounded-box place-items-center">
-              <div onClick={hendelGoogleLogin} className="flex gap-3 text-black items-center">
+            <div className="grid flex-grow card bg-gradient-to-b from-orange-500 to-orange-300 rounded-box place-items-center">
+              <div onClick={hendelGoogleLogin} className="flex gap-3 text-black  items-center">
                 <BsGoogle/>
-                <h1 className="text-xl font-medium">Login</h1>
+                <h1 className="text-xl font-medium">Login With Google</h1>
               </div>
             </div>
             <div className="divider divider-horizontal">OR</div>
-            <div className="grid flex-grow card bg-base-300 rounded-box place-items-center">
-            <div onClick={hendelGithubLogin} className="flex gap-3 text-black items-center">
+            <div className="grid flex-grow card bg-gradient-to-t from-orange-500 to-orange-300 rounded-box place-items-center">
+            <div onClick={hendelGithubLogin} className="flex gap-3 text-black  items-center">
                 <BsGithub/>
-                <h1 className="text-xl font-medium">Login</h1>
+                <h1 className="text-xl font-medium">Login With Github</h1>
               </div>
             </div>
           </div>
           <p className="text-xl text-white pt-5">
-            New website vigit{" "}
+            Don't have account{" "}
             <Link to="/registor" className="text-orange-500 hover:underline">
               {" "}
               Please Registor

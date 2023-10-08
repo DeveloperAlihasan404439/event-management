@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-// import './styles.css';
 import slider_1 from '../../../assets/img/Baby_1 .jpg'
 import slider_2 from '../../../assets/img/Engagement .jpg'
 import slider_3 from '../../../assets/img/Parties.jpg'
@@ -28,7 +27,7 @@ const Banner = () => {
           }}
           navigation={true}
           modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper h-[70vh]"
+          className="mySwiper h-[70vh] w-full"
         >
           <SwiperSlide><img src={slider_1} alt="" className='h-full w-full'/></SwiperSlide>
           <SwiperSlide><img src={slider_2} alt="" className='h-full w-full'/></SwiperSlide>
