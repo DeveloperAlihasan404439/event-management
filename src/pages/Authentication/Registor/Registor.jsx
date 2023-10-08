@@ -12,7 +12,7 @@ const Registor = () => {
     const photo = e.target.photo.value;
     const password = e.target.password.value;
     setErrorData('')
-    /* if (password.length < 6) {
+    if (password.length < 6) {
       return setErrorData("Password must be 6 characters long");
     }
     if (!/[A-Z]/.test(password)) {
@@ -20,7 +20,7 @@ const Registor = () => {
     }
     if (!/[@#$%^&+=!]/.test(password)) {
       return setErrorData("Password must be special symbol");
-    } */
+    }
     createUer(email, password)
     .then((result) => {
       // Signed up 

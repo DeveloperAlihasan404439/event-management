@@ -17,11 +17,11 @@ const SocialDetails = () => {
   return (
     <div className="pt-20 pb-10 text-white lg:flex gap-5 items-center w-11/12 mx-auto lg:h-[100vh]">
       <div className="w-full lg:w-[60%]">
-        <img src={listImages?listImages:thumbnail} alt="" className="w-[100%] rounded-2xl" />
+        <img src={listImages?listImages:thumbnail} alt="" className="w-[100%] h-[60vh] rounded-2xl" />
         <div className="flex  gap-3 items-center justify-center py-3 my-2 bg-[#05070e91]">
           {images?.map((image, i) => (
             <div onClick={()=>setListImages(image.img_list)} key={i} className="border-2 border-[#05070e91] rounded-lg">
-              <img src={image.img_list} alt="" className="w-[130px] rounded-lg"/>
+              <img src={image.img_list} alt="" className="w-[130px] h-[100px] rounded-lg"/>
             </div>
           ))}
         </div>

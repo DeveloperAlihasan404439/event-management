@@ -1,54 +1,52 @@
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
-import { BsGoogle,BsGithub } from 'react-icons/bs';
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { BsGoogle, BsGithub } from "react-icons/bs";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../CreateContext/CreateContext";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 const Login = () => {
-    const [errorid, setErrorid] = useState(null)
-    const {loginUser,googleUser,githubUser,} = useContext(AuthContext)
-    const googleProvider = new GoogleAuthProvider()
-    const githubProvider = new GithubAuthProvider()
-    const location = useLocation()
-    const navigate = useNavigate()
+  const [errorid, setErrorid] = useState(null);
+  const { loginUser, googleUser, githubUser } = useContext(AuthContext);
+  const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
+  const location = useLocation();
+  console.log();
+  const navigate = useNavigate();
   const hendelLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     loginUser(email, password)
-    .then((userCredential) => {
-        navigate(location?.state? location.state: '/')
-        const user = userCredential.user;
-        console.log(user);
+      .then(() => {
+        navigate(location?.state ? location.state.from.pathname : "/");
+        setErrorid("success login");
       })
       .catch((error) => {
         const errorMessage = error.message;
-        setErrorid(errorMessage)
+        setErrorid(errorMessage);
       });
   };
-  const hendelGoogleLogin = ()=>{
+  const hendelGoogleLogin = () => {
     googleUser(googleProvider)
-    .then(resutl => {
-        navigate(location?.state? location.state: '/')
-        const userInfo = resutl.user;
-        console.log(userInfo);
-    })
-    .catch((error) => {
+      .then(() => {
+        navigate(location?.state ? location.state.from.pathname : "/");
+        setErrorid("success login");
+      })
+      .catch((error) => {
         const errorMessage = error.message;
         setErrorid(errorMessage);
       });
-  }
-  const hendelGithubLogin = ()=>{
+  };
+  const hendelGithubLogin = () => {
     githubUser(githubProvider)
-    .then(resutl => {
-        navigate(location?.state? location.state: '/')
-        const userInfo = resutl.user;
-        console.log(userInfo);
-    })
-    .catch((error) => {
+      .then(() => {
+        navigate(location?.state ? location.state.from.pathname : "/");
+        setErrorid("success login");
+      })
+      .catch((error) => {
         const errorMessage = error.message;
-        console.log(errorMessage);
+        setErrorid(errorMessage);
       });
-  }
+  };
   return (
     <div className="w-11/12 mx-auto pt-20 pb-10">
       <div className="w-full p-5 ">
@@ -91,10 +89,11 @@ const Login = () => {
               </a>
             </label>
           </div>
-          {
-            errorid?<p className="text-xl text-red-500 pt-4">{errorid}</p>
-            :''
-          }
+          {errorid ? (
+            <p className="text-xl text-red-500 pt-4">{errorid}</p>
+          ) : (
+            ""
+          )}
           <input
             type="submit"
             className="w-full py-2 text-xl mt-7 text-black bg-gradient-to-r from-orange-500 to-orange-300 rounded-lg"
@@ -102,21 +101,27 @@ const Login = () => {
           />
           <div className="flex w-full pt-4 text-white">
             <div className="grid flex-grow card bg-gradient-to-b from-orange-500 to-orange-300 rounded-box place-items-center">
-              <div onClick={hendelGoogleLogin} className="flex gap-3 text-black  items-center">
-                <BsGoogle/>
-                <h1 className="text-xl font-medium">Login With Google</h1>
+              <div
+                onClick={hendelGoogleLogin}
+                className="flex gap-3 text-black  items-center"
+              >
+                <BsGoogle />
+                <h1 className=" md:text-xl font-medium md:flex">Login <span className="hidden md:block">With Google</span></h1>
               </div>
             </div>
             <div className="divider divider-horizontal">OR</div>
             <div className="grid flex-grow card bg-gradient-to-t from-orange-500 to-orange-300 rounded-box place-items-center">
-            <div onClick={hendelGithubLogin} className="flex gap-3 text-black  items-center">
-                <BsGithub/>
-                <h1 className="text-xl font-medium">Login With Github</h1>
+              <div
+                onClick={hendelGithubLogin}
+                className="flex gap-3 text-black  items-center"
+              >
+                <BsGithub />
+                <h1 className="text-xl font-medium md:flex">Login <span className="hidden md:block">With Github</span></h1>
               </div>
             </div>
           </div>
           <p className="text-xl text-white pt-5">
-            Don't have account{" "}
+            Do not have account{" "}
             <Link to="/registor" className="text-orange-500 hover:underline">
               {" "}
               Please Registor
