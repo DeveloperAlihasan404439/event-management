@@ -8,6 +8,7 @@ import PriveatRoute from "../PriveatRoute/PriveatRoute"
 import Error from "../Error/Error"
 import ServicesSocail from "../ServicesSocail/ServicesSocail"
 import ContactUs from "../../companent/ContactUs/ContactUs"
+import Galary from "../Galary/Galary"
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <ContactUs/>,
+            },
+            {
+                path: '/galari',
+                element: <Galary/>,
             },
             {
                 path: '/registor',

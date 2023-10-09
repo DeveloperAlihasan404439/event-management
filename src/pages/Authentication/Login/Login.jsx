@@ -10,7 +10,6 @@ const Login = () => {
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
   const location = useLocation();
-  console.log(location);
   const navigate = useNavigate();
   const hendelLogin = (e) => {
     setErrorid('')
@@ -24,36 +23,24 @@ const Login = () => {
           'Success the login user',
           'success'
           )
+          e.target.reset();
          return navigate(location?.state ? location.state.from.pathname : "/");
       })
       .catch ((error)=>{
         const errorCode = error.code;
-        if(errorCode === "auth/invalid-email"){
-          return setErrorid("Invalid email address. Please check the email format.");
-        }
-        else if(errorCode === "auth/wrong-password"){
-          return setErrorid("Incorrect password. Please check your password.");
-        }
-        else{
+        if (errorCode === "auth/invalid-email") {
+          setErrorid("Invalid email address. Please check the email format.");
+        } else if (errorCode === "auth/wrong-password") {
+          setErrorid("Incorrect password. Please check your password.");
+        } else if (errorCode === "auth/invalid-password") {
+          setErrorid("Invalid password. Please check your password format.");
+        } else {
           setErrorid("An error occurred. Please try again later.");
         }
+        /* (errorCode === "auth/invalid-email" && errorCode === "auth/wrong-password")?
+        setErrorid("Invalid email address. Please check the email format.")
+        : setErrorid("Incorrect password. Please check your password.") */
       })
-      e.target.reset();
-      /* .catch((error) => {
-        const errorCode = error.code;
-        console.log(error);
-        const errorMessage = error.message;
-        if (errorCode === 'auth/invalid-email') {
-          setErrorid('Invalid email address. Please check the email format.');
-        } else if (errorCode === 'auth/user-not-found') {
-          setErrorid('User not found. Please check your email.');
-        } else if (errorCode === 'auth/wrong-password') {
-          setErrorid('Incorrect password. Please check your password.');
-        } else {
-          // Handle other authentication errors
-          setErrorid(errorMessage);
-        }
-      }); */
   };
   const hendelGoogleLogin = () => {
     googleUser(googleProvider)

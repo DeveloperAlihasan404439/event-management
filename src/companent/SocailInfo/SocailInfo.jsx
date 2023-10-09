@@ -6,21 +6,28 @@ import {
   AccordionPanel,
   Box,
 } from "@chakra-ui/react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 const SocailInfo = () => {
   return (
     <div className="w-11/12 mx-auto py-8">
-      <h1 className="text-xl md:text-2xl lg:text-4xl font-medium text-center pb-5 text-orange-500">
-        Socail Events Information
-      </h1>
-      <h1 className="text-lg md:text-xl font-medium text-center pb-5 text-white w-[50%] mx-auto">
-        Social events are gatherings that bring people together for various
-        purposes, fostering social interaction, and creating memorable
-        experiences. These events play a vital role in building connections,
-        strengthening relationships, and celebrating important moments in our
-        lives.
-      </h1>
+      <div data-aos="zoom-out"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+        <h1 className="text-xl md:text-2xl lg:text-4xl font-medium text-center pb-5 text-orange-500">
+          Socail Events Information
+        </h1>
+        <h1 className="text-lg md:text-xl font-medium text-center pb-5 text-white w-[50%] mx-auto">
+          Social events are gatherings that bring people together for various
+          purposes, fostering social interaction, and creating memorable
+          experiences. These events play a vital role in building connections,
+          strengthening relationships, and celebrating important moments in our
+          lives.
+        </h1>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div>
+        <div data-aos="fade-right" data-aos-duration="2000">
           <Accordion defaultIndex={[0]} allowToggle>
             <AccordionItem>
               <h2 className="text-black text-xl font-medium bg-white p-3 rounded-lg shadow-xl">
@@ -90,14 +97,16 @@ const SocailInfo = () => {
             </AccordionItem>
           </Accordion>
         </div>
-        <div className="flex items-center">
-          <img
-            src="https://i.ibb.co/6ZHbSzY/socail.jpg"
-            alt=""
-            className="rounded-lg h-full"
-          />
+        <div data-aos="zoom-in-down" data-aos-duration="2000">
+          <div className="flex items-center h-full">
+            <img
+              src="https://i.ibb.co/6ZHbSzY/socail.jpg"
+              alt=""
+              className="rounded-lg h-full"
+            />
+          </div>
         </div>
-        <div>
+        <div data-aos="fade-left" data-aos-duration="2000">
           <Accordion defaultIndex={[0]} allowToggle>
             <AccordionItem>
               <h2 className="text-black text-xl font-medium bg-white p-3 rounded-lg shadow-xl mt-4">

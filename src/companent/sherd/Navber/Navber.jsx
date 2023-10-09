@@ -17,6 +17,7 @@ const Navber = () => {
     <>
       <NavLink to="/">Home</NavLink>
       <NavLink to="/contact"> Contact Us</NavLink>
+      <NavLink to="/reacharts">Charts Services</NavLink>
       {
         user?<NavLink to="/services">Services</NavLink>:''
       }

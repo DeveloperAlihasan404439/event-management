@@ -21,13 +21,18 @@ const OurTimes = () => {
   };
   return (
     <div className="py-10 ">
+      <div data-aos="fade-down" data-aos-duration="2000">
       <h1 className="text-xl md:text-2xl lg:text-4xl font-medium text-center pb-3 text-orange-500">
         Our Exclusive User Team
       </h1>
       <h1 className="text-lg md:text-xl font-medium text-center pb-5 text-white w-[50%] mx-auto">
       The Exclusive User Team comprises a group of highly skilled professionals dedicated to delivering unparalleled user experiences and fostering customer satisfaction. With an unwavering commitment to excellence, our team consistently goes the extra mile to cater to the unique needs of our users and clients.
       </h1>
-      <div className="lg:w-[50%] lg:h-[500px] flex justify-center items-center mx-auto">
+      </div>
+      <div data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="1500">
+        <div className="lg:w-[50%] lg:h-[500px] flex justify-center items-center mx-auto">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -66,7 +71,8 @@ const OurTimes = () => {
             <span ref={progressContent}></span>
           </div>
         </Swiper>
-      </div>
+        </div>
+    </div>
     </div>
   );
 };

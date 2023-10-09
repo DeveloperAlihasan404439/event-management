@@ -6,9 +6,8 @@ import { getAuth, updateProfile } from "firebase/auth";
 
 const Registor = () => {
   const [errorData, setErrorData] = useState('')
-  const {createUer} = useContext(AuthContext)
+  const {createUer,logOutUser} = useContext(AuthContext)
   const location = useLocation();
-  console.log(location);
   const navigate = useNavigate();
   const auth = getAuth()
   const hendelRegistor = (e) => {
@@ -28,21 +27,22 @@ const Registor = () => {
       return setErrorData("Password must be special symbol");
     }
     createUer(email, password)
-    .then(() => {
-      
-      Swal.fire(
-        'Login Your Google',
-        'Success the registor in user',
-        'success'
-      )
+    .then((result) => {
       updateProfile(auth.currentUser, {
         displayName: name, photoURL: photo
       }).then(() => {
+        navigate('/login');
+        logOutUser()
+        e.target.reset();
+        Swal.fire(
+          'Success Yor Registor',
+          'Success the registor in user',
+          'success'
+        )
       }).catch((error) => {
         const errorMessage = error.message;
         setErrorData(errorMessage);
       });
-      return navigate(location?.state ? location.state.from.pathname : "/login");
     })
     .catch((error) => {
       const errorMessage = error.message;

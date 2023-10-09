@@ -1,0 +1,12 @@
+.lg-react-element{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.lg-react-element >a >img{
+    width: 100px;
+    height: 100px;
+}
+.brithday{
+    width: 300px;
+}

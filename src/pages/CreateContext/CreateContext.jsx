@@ -38,7 +38,7 @@ const CreateContext = ({children}) => {
         loginUser,
         googleUser,
         githubUser,
-        loding: loading,
+        loading,
         logOutUser
     }
     return (
