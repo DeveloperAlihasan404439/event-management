@@ -38,7 +38,7 @@ const SocailInfo = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <div className="bg-base-200 text-black rounded-lg text-lg text-justify">
+              <div className=" text-black bg-white rounded-b-lg text-lg text-justify">
                 <AccordionPanel pb={4} className=" p-4">
                   A wedding is a once-in-a-lifetime event where two souls come
                   together in love and commitment. Join us in celebrating the
@@ -61,7 +61,7 @@ const SocailInfo = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <div className="bg-base-200 text-black rounded-lg text-lg text-justify">
+              <div className=" text-black bg-white rounded-b-lg text-lg text-justify">
                 <AccordionPanel pb={4} className=" p-4">
                   Birthdays are all about celebrating life and making memories.
                   Get ready to put on your party hat and join us for a fantastic
@@ -82,7 +82,7 @@ const SocailInfo = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <div className="bg-base-200 text-black rounded-lg text-lg text-justify">
+              <div className=" text-black bg-white rounded-b-lg text-lg text-justify">
                 <AccordionPanel pb={4} className=" p-4">
                   Fifty years of love, laughter, and togetherness deserve a
                   grand celebration. Join us in commemorating the golden
@@ -117,7 +117,7 @@ const SocailInfo = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <div className="bg-base-200 text-black rounded-lg text-lg text-justify">
+              <div className=" text-black bg-white rounded-b-lg text-lg text-justify">
                 <AccordionPanel pb={4} className=" p-4">
                   Love is in the air as we gather to celebrate the engagement of
                   [Couples Names]. Theyve taken the exciting step of committing
@@ -139,7 +139,7 @@ const SocailInfo = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <div className="bg-base-200 text-black rounded-lg text-lg text-justify">
+              <div className=" text-black bg-white rounded-b-lg text-lg text-justify">
                 <AccordionPanel pb={4} className=" p-4">
                   After years of hard work and dedication, its time to bid
                   farewell to [Retirees Name]. Join us in celebrating their
@@ -160,7 +160,7 @@ const SocailInfo = () => {
                   <AccordionIcon />
                 </AccordionButton>
               </h2>
-              <div className="bg-base-200 text-black rounded-lg text-lg text-justify">
+              <div className=" text-black bg-white rounded-b-lg text-lg text-justify">
                 <AccordionPanel pb={4} className=" p-4">
                   A little one is on the way, and we cant wait to celebrate!
                   Join us for a baby shower in honor of Parents Names as they
