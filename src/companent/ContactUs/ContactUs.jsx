@@ -25,53 +25,48 @@ const ContactUs = () => {
                 Connect with I genuinely and purposefully. I value your
                 interactions and look forward to hearing from you.
               </h1>
-              <p className="text-lg font-light text-white py-2">
+              <p className="text-lg md:text-xl font-light text-white py-2">
                 Our Contact Us page is your gateway to getting in touch with us.
                 We value your feedback, inquiries, and suggestions. Whether you
                 have questions about our products, need assistance with an
                 order, or simply want to connect with our team, we are here to
                 assist you. Please feel free to reach out using the provided
-                contact form, email address, or phone number. We strive to
-                respond promptly to all your messages and ensure that your
-                concerns are addressed effectively. Your input is invaluable in
-                helping us improve our services and meet your needs. We look
-                forward to hearing from you and providing the assistance you
-                require.
+                contact form, email address, or phone number.
               </p>
             </div>
           </div>
-          <div className="w-[90%] mx-auto pb-5">
-            <div className="border-2 border-[#1e19197c] rounded-xl shadow-xl p-5 w-full flex justify-between items-center">
-              <div data-aos="fade-right" data-aos-offset="300">
-                <div className="flex gap-4 mb-3 text-2xl items-center">
+          <div className="md:w-[90%] mx-auto pb-5">
+            <div className="border-2 border-[#1e19197c] rounded-xl shadow-xl p-5 w-full md:flex justify-between items-center">
+              <div data-aos="flip-left" data-aos-offset="300">
+                <div className="flex gap-4 mb-3 text-lg md:text-2xl items-center">
                   <div className="p-2 bg-black  rounded-[50%]">
-                    <BiUser className="text-orange-500 text-5xl" />
+                    <BiUser className="text-orange-500 text-xl md:text-5xl" />
                   </div>
                   <h1 className="text-white">Developer Ali Hasen</h1>
                 </div>
-                <div className="flex gap-4 mb-3 text-2xl items-center ">
+                <div className="flex gap-4 mb-3 text-lg md:text-2xl items-center ">
                   <div className="p-2 bg-black  rounded-[50%]">
-                    <AiTwotoneHome className="text-orange-500 text-5xl" />
+                    <AiTwotoneHome className="text-orange-500 text-xl md:text-5xl" />
                   </div>
                   <h1 className="text-white">Nilphamari, Rangpur, Dhaka</h1>
                 </div>
-                <div className="flex gap-4 mb-3 text-2xl items-center ">
+                <div className="flex gap-4 mb-3 text-lg md:text-2xl items-center ">
                   <div className="p-2 bg-black  rounded-[50%]">
-                    <BiSolidPhoneOutgoing className="text-orange-500 text-5xl" />
+                    <BiSolidPhoneOutgoing className="text-orange-500 text-xl md:text-5xl" />
                   </div>
                   <h1 className="text-white">+8801783-228430</h1>
                 </div>
-                <div className="flex gap-4 mb-3 text-2xl items-center ">
+                <div className="flex gap-4 mb-3 text-lg md:text-2xl items-center ">
                   <div className="p-2 bg-black  rounded-[50%]">
-                    <AiOutlineMail className="text-orange-500 text-5xl" />
+                    <AiOutlineMail className="text-orange-500 text-xl md:text-5xl" />
                   </div>
-                  <h1 className="text-white">developeralihasan777@gmail.com</h1>
+                  <h1 className="text-white">alihasan404439@gmail.com</h1>
                 </div>
               </div>
               <div className="md:w-[50%]">
-                <div data-aos="fade-left" data-aos-offset="300">
+                <div data-aos="flip-right" data-aos-offset="300">
                   <form>
-                    <h1 className="text-5xl font-medium text-white text-center">
+                    <h1 className="text-2xl md:text-5xl font-medium text-white text-center">
                       Your Information
                     </h1>
                     <input

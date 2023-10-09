@@ -19,7 +19,7 @@ const Error = () => {
               alt=""
               className="rounded-lg h-[70vh]"
             />
-            <div className="absolute bottom-[22%] left-[40%] flex flex-col justify-center items-center mt-4 ">
+            <div className="absolute bottom-[22%] left-[20%] md:left-[40%] flex flex-col justify-center items-center mt-4 ">
               <Link to="/">
                 <button className=" px-12 py-3 font-medium text-xl bg-gradient-to-r from-orange-500 to-orange-300 rounded-b-lg  rounded-lg text-white">
                   Go To Home

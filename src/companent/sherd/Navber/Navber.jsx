@@ -17,7 +17,7 @@ const Navber = () => {
     <>
       <NavLink to="/">Home</NavLink>
       <NavLink to="/contact"> Contact Us</NavLink>
-      <NavLink to="/reacharts">Charts Services</NavLink>
+      <NavLink to="/galari">Social Galary</NavLink>
       {
         user?<NavLink to="/services">Services</NavLink>:''
       }
@@ -65,8 +65,8 @@ const Navber = () => {
                       alt=""
                       className="w-[40px] rounded-[50%] text-white"
                     />
-                    <h1>{user.displayName}</h1>
-                    <h1>{user.email}</h1>
+                    <h1 className="text-2xl">{user.displayName}</h1>
+                    <h1 className="text-sm">{user.email}</h1>
                     <hr />
                     <NavLink onClick={logOutUser}>Log Out</NavLink>
                     

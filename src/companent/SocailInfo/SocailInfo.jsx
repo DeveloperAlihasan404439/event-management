@@ -18,7 +18,7 @@ const SocailInfo = () => {
         <h1 className="text-xl md:text-2xl lg:text-4xl font-medium text-center pb-5 text-orange-500">
           Socail Events Information
         </h1>
-        <h1 className="text-lg md:text-xl font-medium text-center pb-5 text-white w-[50%] mx-auto">
+        <h1 className="text-lg md:text-xl font-medium text-center pb-5 text-white md:w-[50%] mx-auto">
           Social events are gatherings that bring people together for various
           purposes, fostering social interaction, and creating memorable
           experiences. These events play a vital role in building connections,
@@ -27,7 +27,7 @@ const SocailInfo = () => {
         </h1>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div data-aos="fade-right" data-aos-duration="2000">
+        <div  data-aos="fade-down" data-aos-duration="2000">
           <Accordion defaultIndex={[0]} allowToggle>
             <AccordionItem>
               <h2 className="text-black text-xl font-medium bg-white p-3 rounded-lg shadow-xl">
@@ -106,7 +106,7 @@ const SocailInfo = () => {
             />
           </div>
         </div>
-        <div data-aos="fade-left" data-aos-duration="2000">
+        <div data-aos="fade-up" data-aos-duration="2000">
           <Accordion defaultIndex={[0]} allowToggle>
             <AccordionItem>
               <h2 className="text-black text-xl font-medium bg-white p-3 rounded-lg shadow-xl mt-4">

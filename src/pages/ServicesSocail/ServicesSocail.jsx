@@ -20,7 +20,7 @@ const ServicesSocail = () => {
     return (
         <div className="pt-20 w-11/12 mx-auto">
             <h1 className="text-center py-8 text-xl md:text-3xl font-medium text-orange-500">Social Services Empowering Communities</h1>
-            <p className="text-center text-lg md:text-xl font-medium text-white w-1/2 mx-auto">Discover our commitment to building stronger communities through comprehensive social services. We provide vital support, including counseling, housing assistance, and education programs. Together, we can make a positive impact on lives and foster a brighter future for all.</p>
+            <p className="text-center text-lg md:text-xl font-medium text-white md:w-1/2 mx-auto">Discover our commitment to building stronger communities through comprehensive social services. We provide vital support, including counseling, housing assistance, and education programs. Together, we can make a positive impact on lives and foster a brighter future for all.</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-5">
                 {
