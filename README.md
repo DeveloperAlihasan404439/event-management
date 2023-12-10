@@ -1,7 +1,7 @@
 # Website name
 ##  Fieta
 
-> (@Live_link)[https://socail-enverment-09.web.app]
+> (@Live_link)[event-menagement-surge.surge.sh]
 ## Features_And_Functionalities
 
 - Our Home Page features a user-friendly navigation bar for easy access to various sections of the website. You'll find a captivating banner/slider showcasing the essence of our event management services. There's a dedicated "Services" section where you can explore six unique event services, each accompanied by a name, image, price, and a brief description. At the bottom of the page, you'll find our footer.
