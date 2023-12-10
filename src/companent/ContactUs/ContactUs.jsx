@@ -18,7 +18,7 @@ const ContactUs = () => {
         className="w-11/12 mx-auto border-2  rounded-lg bg-scroll"
         style={containerStyle}
       >
-        <div className="bg-[#1e19197c]">
+        <div className="bg-black/80">
           <div data-aos="zoom-in-down" data-aos-duration="2000">
             <div className="md:w-[60%] mx-auto text-center p-5">
               <h1 className="text-3xl font-medium text-orange-500">
@@ -70,13 +70,13 @@ const ContactUs = () => {
                       Your Information
                     </h1>
                     <input
-                      className="w-full text-2xl p-3 bg-transparent border-b-2 border-black text-white outline-none focus:outline-none"
+                      className="w-full text-2xl p-3 bg-transparent border-b-2 border-violet-400 text-white outline-none focus:outline-none"
                       type="text"
                       name="name"
                       placeholder="Name"
                     />
                     <input
-                      className="w-full text-2xl p-3 bg-transparent border-b-2 border-black text-white outline-none focus:outline-none"
+                      className="w-full text-2xl p-3 bg-transparent border-b-2 border-violet-400 text-white outline-none focus:outline-none"
                       type="Email"
                       name="email"
                       placeholder="Email"
@@ -87,7 +87,7 @@ const ContactUs = () => {
                       cols="10"
                       rows="5"
                       placeholder="Enter your message"
-                      className="w-full text-2xl p-3 bg-transparent border-b-2 border-black text-white outline-none focus:outline-none"
+                      className="w-full text-2xl p-3 bg-transparent border-b-2 border-violet-400 text-white outline-none focus:outline-none"
                     ></textarea>
                     <button className="w-full py-3 bg-orange-400 hover:bg-orange-600 text-white text-2xl rounded-3xl mt-3">
                       Submit Contact

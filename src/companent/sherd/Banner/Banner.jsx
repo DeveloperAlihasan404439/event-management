@@ -31,16 +31,19 @@ const Banner = () => {
         className="mySwiper h-[70vh] w-full"
       >
         <SwiperSlide>
-          <LazyLoadImage alt="" src={slider_1} className="h-full w-full" />
+          <LazyLoadImage alt="" src="https://images.unsplash.com/photo-1674574124345-02c525664b65?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZXZlbnQlMjBtZW5hZ2VtZW50fGVufDB8fDB8fHww" className="h-full w-full" />
         </SwiperSlide>
         <SwiperSlide>
-          <LazyLoadImage alt="" src={slider_2} className="h-full w-full" />
+          <LazyLoadImage alt="" src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGV2ZW50JTIwbWVuYWdlbWVudHxlbnwwfHwwfHx8MA%3D%3D" className="h-full w-full" />
         </SwiperSlide>
         <SwiperSlide>
-          <LazyLoadImage alt="" src={slider_3} className="h-full w-full" />
+          <LazyLoadImage alt="" src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGV2ZW50JTIwbWVuYWdlbWVudHxlbnwwfHwwfHx8MA%3D%3D" className="h-full w-full" />
         </SwiperSlide>
         <SwiperSlide>
-          <LazyLoadImage alt="" src={slider_4} className="h-full w-full" />
+          <LazyLoadImage alt="" src="https://images.unsplash.com/photo-1501238295340-c810d3c156d2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzd8fGV2ZW50JTIwbWVuYWdlbWVudHxlbnwwfHwwfHx8MA%3D%3D" className="h-full w-full" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <LazyLoadImage alt="" src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTd8fGV2ZW50JTIwbWVuYWdlbWVudHxlbnwwfHwwfHx8MA%3D%3D" className="h-full w-full" />
         </SwiperSlide>
       </Swiper>
     </>

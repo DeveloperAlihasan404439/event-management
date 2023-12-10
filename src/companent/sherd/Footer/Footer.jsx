@@ -1,42 +1,117 @@
 import { BsInstagram, BsTwitter } from "react-icons/bs";
-import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa";
+import { FaFacebookF, FaGoogle } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="w-11/12 mx-auto">
-      <footer className="footer footer-center p-10 text-base-content rounded">
-        <nav className="md:grid md:grid-flow-col gap-4 ">
-          <a className="link link-hover text-xl md:text-3xl font-medium text-white">
-            Home
-          </a>
-          <a className="link link-hover text-xl md:text-3xl font-medium text-white">
-            Contact Us
-          </a>
-          <a className="link link-hover text-xl md:text-3xl font-medium text-white">
-          Services
-          </a>
-          <a className="link link-hover text-xl md:text-3xl font-medium text-white">
-          Social Galary
-          </a>
-        </nav>
-        <img
-          src="https://i.ibb.co/2hJ4c8X/Feista-removebg-preview.png"
-          alt=""
-          className="w-[200px] rounded-lg"
-        />
-        <nav>
-          <div className="grid grid-flow-col gap-4 text-2xl md:text-3xl text-white">
-            <BsInstagram />
-            <BsTwitter />
-            <FaFacebookF />
-            <FaGoogle />
-            <FaGithub />
+      <footer className="px-4 divide-y  md:mt-5">
+        <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
+          <div className="lg:w-1/3">
+            
+          <h1 className="text-xl font-mono text-white uppercase tracking-[3px]">EventopiaPro</h1>
           </div>
-        </nav>
-        <aside>
-          <p className="text-white">
-            Copyright © 10-082023 - All right reserved by MBSL Industries Ltd
-          </p>
-        </aside>
+          <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+            <div className="space-y-3">
+              <h3 className="tracki uppercase text-white">Product</h3>
+              <ul className="space-y-1">
+                <li>
+                  <a rel="noopener noreferrer" className=" text-white" href="#">
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" className=" text-white" href="#">
+                    Integrations
+                  </a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" className=" text-white" href="#">
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" className=" text-white" href="#">
+                    FAQ
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <h3 className="tracki uppercase text-white">Company</h3>
+              <ul className="space-y-1">
+                <li>
+                  <a rel="noopener noreferrer" className=" text-white" href="#">
+                    Privacy
+                  </a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" className=" text-white" href="#">
+                    Terms of Service
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <h3 className="uppercase text-white">Developers</h3>
+              <ul className="space-y-1">
+                <li>
+                  <a rel="noopener noreferrer" className=" text-white" href="#">
+                    Public API
+                  </a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" className=" text-white" href="#">
+                    Documentation
+                  </a>
+                </li>
+                <li>
+                  <a rel="noopener noreferrer" className=" text-white" href="#">
+                    Guides
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-3">
+              <div className="uppercase  text-white">Social media</div>
+              <div className="flex justify-start space-x-3">
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  title="Facebook"
+                  className="flex items-center text-2xl text-white p-1"
+                >
+                  <FaFacebookF />
+                </a>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  title="Twitter"
+                  className="flex items-center text-2xl text-white p-1"
+                >
+                  <BsTwitter />
+                </a>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  title="Instagram"
+                  className="flex items-center text-2xl text-white p-1"
+                >
+                  <BsInstagram />
+                </a>
+                <a
+                  rel="noopener noreferrer"
+                  href="#"
+                  title="Instagram"
+                  className="flex items-center text-2xl text-white p-1"
+                >
+                  <FaGoogle />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="py-6 text-sm text-center text-white ">
+          © 1968 Company Co. All rights reserved.
+        </div>
       </footer>
     </div>
   );

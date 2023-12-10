@@ -59,12 +59,7 @@ const Navber = () => {
                     {
                     user?
                     <>
-                    <img
-                      
-                      src={user.photoURL}
-                      alt=""
-                      className="w-[40px] rounded-[50%] text-white"
-                    />
+                    <h1 className="text-xl font-mono text-white uppercase tracking-[3px]">EventopiaPro</h1>
                     <h1 className="text-2xl">{user.displayName}</h1>
                     <h1 className="text-sm">{user.email}</h1>
                     <hr />
@@ -82,12 +77,7 @@ const Navber = () => {
             </div>
             <div className="">
               <div className="flex gap-3 items-center lg:flex-row-reverse">
-                <h1 className="text-3xl font-mono text-white">Fieta</h1>
-                <img
-                  src="https://i.ibb.co/2hJ4c8X/Feista-removebg-preview.png"
-                  alt=""
-                  className="w-[50px] rounded-lg"
-                />
+                <h1 className="text-xl font-mono text-white uppercase tracking-[3px]">EventopiaPro</h1>
               </div>
             </div>
           </div>
@@ -146,21 +136,6 @@ const Navber = () => {
               </MenuList>
             </Menu>
             </div>
-            {/* {user ? (
-              <div onClick={()=>setUsers(!users)} className="flex gap-4 items-center">
-                <img
-                  src={user?.photoURL}
-                  alt=""
-                  className="w-[50px] rounded-[50%]"
-                />
-              </div>
-            ) : (
-              <img onClick={()=>setUsers(!users)}
-                src="https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg"
-                alt=""
-                className="w-[50px] rounded-[50%] text-white"
-              />
-            )} */}
           </div>
         </div>
       </div>

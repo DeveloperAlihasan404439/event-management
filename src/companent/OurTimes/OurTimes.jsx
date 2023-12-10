@@ -21,58 +21,53 @@ const OurTimes = () => {
   };
   return (
     <div className="py-10 w-11/12 mx-auto">
-      <div data-aos="fade-down" data-aos-duration="2000">
-      <h1 className="text-xl md:text-2xl lg:text-4xl font-medium text-center pb-3 text-orange-500">
-        Our Exclusive User Team
-      </h1>
-      <h1 className="text-lg md:text-xl font-medium text-center pb-5 text-white md:w-[50%] mx-auto">
-      The Exclusive User Team comprises a group of highly skilled professionals dedicated to delivering unparalleled user experiences and fostering customer satisfaction. With an unwavering commitment to excellence, our team consistently goes the extra mile to cater to the unique needs of our users and clients.
-      </h1>
-      </div>
-      <div data-aos="flip-left"
-     data-aos-easing="ease-out-cubic"
-     data-aos-duration="1500">
+      
+      <div
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1500"
+      >
         <div className="lg:w-[50%] lg:h-[500px] flex justify-center items-center mx-auto">
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
-          onAutoplayTimeLeft={onAutoplayTimeLeft}
-          className="mySwiper z-20 h-40 rounded-[20px]"
-        >
-          {user?.map((times) => (
-            <SwiperSlide key={times.id} className="relative">
-              <img src={times.user_images} alt="" className="w-full h-full" />
-              <div className="absolute bottom-0 left-0  h-full w-full flex justify-center items-end ">
-                <div className="bg-[#1e1919a8] w-full pb-8">
-                  <h1 className="text-center text-2xl pt-5 font-medium text-white">
-                    Name :{times.name}
-                  </h1>
-                  <p className="text-white">Job : {times.jobTitle}</p>
-                  <p className="text-white">
-                    Company Name : {times.companyName}
-                  </p>
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            onAutoplayTimeLeft={onAutoplayTimeLeft}
+            className="mySwiper z-20 h-40 rounded-[20px]"
+          >
+            {user?.map((times) => (
+              <SwiperSlide key={times.id} className="relative">
+                <img src={times.user_images} alt="" className="w-full h-full" />
+                <div className="absolute bottom-0 left-0  h-full w-full flex justify-center items-end ">
+                  <div className="bg-[#1e1919a8] w-full pb-8">
+                    <h1 className="text-center text-2xl pt-5 font-medium text-white">
+                      Name :{times.name}
+                    </h1>
+                    <p className="text-white">Job : {times.jobTitle}</p>
+                    <p className="text-white">
+                      Company Name : {times.companyName}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-          <div className="autoplay-progress" slot="container-end">
-            <svg viewBox="0 0 48 48" ref={progressCircle}>
-              <circle cx="24" cy="24" r="20"></circle>
-            </svg>
-            <span ref={progressContent}></span>
-          </div>
-        </Swiper>
+              </SwiperSlide>
+            ))}
+            <div className="autoplay-progress" slot="container-end">
+              <svg viewBox="0 0 48 48" ref={progressCircle}>
+                <circle cx="24" cy="24" r="20"></circle>
+              </svg>
+              <span ref={progressContent}></span>
+            </div>
+          </Swiper>
         </div>
-    </div>
+      </div>
     </div>
   );
 };
